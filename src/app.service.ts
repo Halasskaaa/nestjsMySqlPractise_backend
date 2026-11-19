@@ -45,6 +45,6 @@ export class AppService {
     return {
       id: rows.insertId,
       nev
-    } as NewJatekDto
+    } as NewJatekDto;
   }
 }

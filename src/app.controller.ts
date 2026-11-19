@@ -1,5 +1,6 @@
 import { Body, Controller, Get, Post, Render } from '@nestjs/common';
 import { AppService } from './app.service.js';
+import { NewJatekDto } from './jatek.dto.js';
 
 @Controller()
 export class AppController {
@@ -29,4 +30,12 @@ export class AppController {
     }
   }
 
+  @Post('jatekok')
+  @Render('jatekok')
+  async ujJatek(@Body() body: NewJatekDto) {
+    await this.appService.Addjatek(
+      body.nev
+    )
+    return this.getJatek()
+  }
 }
