@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Játékok</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Játékok listája</h1>
+
+    <a href="/">Főoldal</a>
+    <a href="/macskak">Macskák kilistázása</a>
+
+    <form method="post">
+        <input type="text" name="nev" placeholder="Játék neve">
+        <button type="submit"></button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Játék neve</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% jatek.forEach(toy=> { %>
+                <tr>
+                    <td>
+                        <%= toy.nev %>
+                    </td>
+                </tr>
+                <%});%>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hun">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Macskák</title>
+</head>
+
+<body>
+    <h1>Macskák listája</h1>
+    <a href="/">Főoldal</a>
+    <a href="/jatekok">Játékok kilistázása</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Súly</th>
+                <th>Szem színe</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% macska.forEach(cat=> { %>
+                <tr>
+                    <td>
+                        <%= cat.suly %>
+                    </td>
+                    <td>
+                        <%= cat.szem_szin %>
+                    </td>
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
